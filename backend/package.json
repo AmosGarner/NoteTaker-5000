@@ -1,0 +1,11 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend application for the NoteTaker-5000 written in NodeJS",
+  "main": "app.js",
+  "author": "Amos Garner",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js"
+  }
+}

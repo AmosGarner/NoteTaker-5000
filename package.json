@@ -1,0 +1,10 @@
+{
+  "name": "NoteTaker-5000",
+  "version": "1.0.0",
+  "description": "Dockerized note taking application",
+  "author": "Amos Garner",
+  "license": "MIT",
+  "scripts": {
+    "restart": "docker-compose down && docker volume prune -f && docker image prune -f && npm install && docker-compose build && docker-compose up"
+  }
+}
