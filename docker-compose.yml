@@ -9,33 +9,33 @@ services:
     working_dir: /backend
     ports:
       - "3000:3000"
-    links:
-      - db
-    depends_on:
-      - db
+    # links:
+    #   - db
+    # depends_on:
+    #   - db
     environment:
       NODE_ENV: development
     command: npm run start
 
-  client:
-    image: node:latest
-    restart: always
-    volumes:
-      - ./client:/client
-    working_dir: /client
-    ports:
-      - "8080:8080"
-    links:
-      - backend
-    depends_on:
-      - backend
-    environment:
-      NODE_ENV: development
-    command: npm run start
+  # client:
+  #   image: node:latest
+  #   restart: always
+  #   volumes:
+  #     - ./client:/client
+  #   working_dir: /client
+  #   ports:
+  #     - "8080:8080"
+  #   links:
+  #     - backend
+  #   depends_on:
+  #     - backend
+  #   environment:
+  #     NODE_ENV: development
+  #   command: npm run start
 
-  db:
-    image: mongo:latest
-    ports:
-      - "27017:27017"
-    volumes:
-      - './data:/data/db'
+  # db:
+  #   image: mongo:latest
+  #   ports:
+  #     - "27017:27017"
+  #   volumes:
+  #     - './data:/data/db'
