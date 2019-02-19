@@ -6,7 +6,8 @@
   "author": "Amos Garner",
   "license": "MIT",
   "scripts": {
-    "start": "node app.js"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
