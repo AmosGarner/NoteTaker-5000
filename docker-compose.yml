@@ -2,40 +2,16 @@ version: "3"
 
 services:
   backend:
-    image: node:latest
-    restart: always
+    build: ./backend/
     volumes:
       - ./backend:/backend
     working_dir: /backend
     ports:
-      - "3000:3000"
-    # links:
-    #   - db
-    # depends_on:
-    #   - db
-    environment:
-      NODE_ENV: development
-    command: npm run start
-
-  # client:
-  #   image: node:latest
-  #   restart: always
-  #   volumes:
-  #     - ./client:/client
-  #   working_dir: /client
+      - 3000:3000
+    command: npm run dev
+  
+  # client-angular:
+  #   hostname: localhost
+  #   build: ./client-angular
   #   ports:
-  #     - "8080:8080"
-  #   links:
-  #     - backend
-  #   depends_on:
-  #     - backend
-  #   environment:
-  #     NODE_ENV: development
-  #   command: npm run start
-
-  # db:
-  #   image: mongo:latest
-  #   ports:
-  #     - "27017:27017"
-  #   volumes:
-  #     - './data:/data/db'
+  #     - 80:80

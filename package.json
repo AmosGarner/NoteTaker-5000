@@ -5,6 +5,7 @@
   "author": "Amos Garner",
   "license": "MIT",
   "scripts": {
-    "restart": "docker-compose down && docker volume prune -f && docker image prune -f && npm install && docker-compose build && docker-compose up"
+    "install": "cd ./backend && npm install && cd ../client-angular && npm install",
+    "restart": "docker-compose down && docker volume prune -f && docker image prune -f && npm install && docker-compose up --build"
   }
 }
