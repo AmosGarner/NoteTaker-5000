@@ -1,6 +1,13 @@
 version: "3"
 
 services:
+  client-angular:
+    build: ./client-angular
+    volumes:
+      - ./client-angular:/app/client-angular
+    ports:
+      - 4200:4200
+
   backend:
     build: ./backend/
     volumes:
@@ -9,9 +16,3 @@ services:
     ports:
       - 3000:3000
     command: npm run dev
-  
-  client-angular:
-    hostname: localhost
-    build: ./client-angular
-    ports:
-      - 4200:4200
