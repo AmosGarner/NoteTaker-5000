@@ -10,8 +10,8 @@ services:
       - 3000:3000
     command: npm run dev
   
-  # client-angular:
-  #   hostname: localhost
-  #   build: ./client-angular
-  #   ports:
-  #     - 80:80
+  client-angular:
+    hostname: localhost
+    build: ./client-angular
+    ports:
+      - 4200:4200
