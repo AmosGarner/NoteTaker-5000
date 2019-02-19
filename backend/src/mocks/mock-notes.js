@@ -1,4 +1,4 @@
-const Note = require('./note');
+const Note = require('../models/note');
 
 module.exports = JSON.stringify(
   [

@@ -1,4 +1,4 @@
-const NOTES = require("../models/mock-notes");
+const NOTES = require("../mocks/mock-notes");
 
 const getNotes = () => {
   return JSON.parse(NOTES);
