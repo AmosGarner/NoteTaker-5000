@@ -6,6 +6,6 @@
   "license": "MIT",
   "scripts": {
     "install": "cd ./backend && npm install && cd ../client-angular && npm install",
-    "restart": "docker-compose down && docker volume prune -f && docker image prune -f && npm install && docker-compose up --build"
+    "restart": "docker-compose down && docker volume prune -f && docker image prune -f && npm install && docker-compose build && docker-compose up"
   }
 }
