@@ -1,6 +1,6 @@
 <div class="notes" class="mx-auto">
   <div class="text-center">
-    <app-button label="Create New Note" classes="my-2 p-4 bg-green-light hover:bg-green font-bold font-mono text-green-darkest hover:text-white rounded"></app-button>
+    <app-button (action)="createNote('New Note', 'This is a new note')" label="Create New Note" classes="my-2 p-4 bg-green-light hover:bg-green font-bold font-mono text-green-darkest hover:text-white rounded"></app-button>
   </div>
   <ul class="list-reset">
     <li *ngFor="let note of notes">
