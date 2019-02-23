@@ -1,4 +1,4 @@
-<header [ngSwitch]="strength">
+<div [ngSwitch]="strength">
   <h1 [ngClass]="classes" *ngSwitchCase='1'>{{ text }}</h1>
   <h2 [ngClass]="classes" *ngSwitchCase='2'>{{ text }}</h2>
   <h3 [ngClass]="classes" *ngSwitchCase='3'>{{ text }}</h3>
@@ -6,4 +6,4 @@
   <h5 [ngClass]="classes" *ngSwitchCase='5'>{{ text }}</h5>
   <h6 [ngClass]="classes" *ngSwitchCase='6'>{{ text }}</h6>
   <header [ngClass]="classes" *ngSwitchDefault>{{ text }}</header>
-</header>
+</div>
