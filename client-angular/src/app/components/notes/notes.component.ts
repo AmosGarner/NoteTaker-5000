@@ -11,7 +11,6 @@ export class NotesComponent implements OnInit {
   notes: Note[];
   
   constructor(public notesService: NoteService) { }
-
   ngOnInit() {
     this.getNotes();
   }
@@ -19,6 +18,10 @@ export class NotesComponent implements OnInit {
   getNotes(): void{
     this.notesService.getNotes()
       .subscribe(notes => this.notes = notes);
+  }
+
+  createNote(): void{
+    console.log("Create a new Note!");
   }
 
 }
