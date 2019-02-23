@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class NoteComponent{
   @Input() title: string;
   @Input() body: string;
+  @Input() lastEdited: Date;
 }
