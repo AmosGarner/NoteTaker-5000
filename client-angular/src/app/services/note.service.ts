@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Note } from '../models/note';
-import { NOTES } from '../mocks/mock-notes';
 import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 
 @Injectable({
@@ -9,10 +9,10 @@ import { Observable, of } from 'rxjs';
 })
 
 export class NoteService {
-  
-  constructor() { }
+  private notesURL = 'http://localhost:3000/api/v1/notes';
+  constructor(private http: HttpClient) { }
 
   getNotes(): Observable<Note[]>{
-    return of(NOTES);
+    return this.http.get<Note[]>(this.notesURL);
   }
 }
