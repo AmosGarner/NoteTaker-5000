@@ -7,7 +7,7 @@ import { NotesComponent } from "./components/notes/notes.component";
 import { HeadingComponent } from "./components/heading/heading.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { NoteComponent } from "./components/note/note.component";
-import { ButtonComponent } from './components/button/button.component';
+import { ButtonComponent } from "./components/button/button.component";
 
 @NgModule({
   declarations: [

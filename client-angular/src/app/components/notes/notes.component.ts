@@ -18,12 +18,13 @@ export class NotesComponent implements OnInit {
   getNotes(): void {
     this.noteService.list().subscribe(notes => (this.notes = notes));
   }
-  
+
   createNote(title: string, body: string): void {
     title = title.trim();
     body = body.trim();
     if (!title || !body) return;
-    this.noteService.create({ title, body } as Note)
+    this.noteService
+      .create({ title, body } as Note)
       .subscribe(note => this.notes.push(note));
   }
 }
