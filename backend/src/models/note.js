@@ -3,5 +3,6 @@ module.exports = class Note {
     this.id = id;
     this.title = title;
     this.body = body;
+    this.lastEdited = Date();
   }
 };
