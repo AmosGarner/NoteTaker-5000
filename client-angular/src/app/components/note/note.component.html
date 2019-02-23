@@ -1,8 +1,17 @@
-<div class="note" class="m-4 p-4 bg-white rounded-lg">
-  <div class="note-header">
-      <app-heading strength=3 text="{{title}}" classes=""></app-heading>
+<div class="relative m-4 bg-white rounded font-sans">
+  <div class="static pt-8 pb-4 px-4 bg-green-light">
+    <button class="absolute pin-t pin-r mt-2 mr-2 p-4 font-bold text-red-light hover:text-red rounded">Delete</button>
+    <app-heading strength=3 text="{{title}}" classes="text-2xl text-blue-darkest font-semibold w-5/6"></app-heading>
+    <hr class="my-2 border-t-2 border-green-lighter">
+    <ul class="flex flex-wrap justify-between list-reset ">
+      <li>Created: 01/01/01</li>
+      <li>Length: {{ body.length }}</li>
+    </ul>
   </div>
-  <div class="note-body m-2 p-4 bg-grey rounded">
-      {{ body }}
+  <div class="p-4">
+      {{body}}
+      <br/>
+      <button class="p-4 font-bold text-blue-light hover:text-blue">Edit</button>
   </div>
+  
 </div>

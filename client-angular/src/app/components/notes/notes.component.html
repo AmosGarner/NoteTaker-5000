@@ -1,5 +1,4 @@
-<div class="notes" class="m-5 p-4 bg-grey-darker">
-  <app-heading strength="2" text="Notes:" class="font-mono text-center"></app-heading>
+<div class="notes" class="mx-auto">
   <ul class="list-reset">
     <li *ngFor="let note of notes">
       <app-note title="{{ note.title }}" body="{{ note.body }}"></app-note>
